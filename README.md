@@ -16,8 +16,8 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### Links
 
-- [Live Site URL:](https://bytepack-frontendmentor-interactive-rating.pages.dev/)
-- [Solution URL:]()
+- [Live Site URL:](https://frontenmetor-interactive-rating-component.vercel.app/)
+- [Solution URL:](https://www.frontendmentor.io/solutions/interactive-rating-component-HdjrJ767K1)
 
 
 ### Built with
