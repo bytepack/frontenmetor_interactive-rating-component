@@ -42,7 +42,7 @@ body {
 .rating, .thanks {
     width: 90%;
     max-width: 40rem;
-    background-color: hsl(213, 19%, 18%);
+    background-color: hsl(213, 19%, 13%);
     padding: 2em;
     border-radius: 20px;
     position: absolute;
