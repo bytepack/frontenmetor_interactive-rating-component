@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Overpass';
+    src: url("fonts/Overpass-Regular.woff2") format("woff2"),
+    url("fonts/Overpass-Regular.woff") format("woff"),
+    url("fonts/Overpass-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overpass';
+    src: url("fonts/Overpass-Bold.woff2") format("woff2"),
+    url("fonts/Overpass-Bold.woff") format("woff"),
+    url("fonts/Overpass-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    --color-primary: hsl(25, 97%, 53%);
+    --circle-size: 4rem;
+    --circle-color: hsl(213, 19%, 21%);;
+    --light-grey: hsl(217, 12%, 63%);
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Overpass', sans-serif;
+    color: hsl(216, 12%, 54%);
+    min-height: 100vh;
+    background-color: hsl(216, 12%, 8%);
+}
+
+
+.rating, .thanks {
+    width: 90%;
+    max-width: 40rem;
+    background-color: hsl(213, 19%, 18%);
+    padding: 2em;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: all 0.3s;
+}
+
+.thanks {
+    text-align: center;
+}
+
+.rating--hidden, .thanks--hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.rating__star {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    background-color: var(--circle-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating__img {
+    width: 40%;
+}
+
+.rating__title, .thanks__title {
+    color: hsl(0, 0%, 100%);
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.rating__numbers {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rating__num {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--circle-color);
+    text-align: center;
+    line-height: var(--circle-size);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.rating__num--active {
+    background-color: var(--light-grey);
+    color: hsl(0, 0%, 100%);
+}
+
+.rating__btn {
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 1000px;
+    letter-spacing: 0.2rem;
+    border: none;
+    outline: none;
+    background-color: var(--color-primary);
+    color: hsl(0, 0%, 100%);
+    padding: 1.2em;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.rating__btn:active {
+    color: var(--color-primary);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.thanks__img {
+    width: 15rem;
+    align-self: center;
+}
+
+.thanks__result {
+    background-color: var(--circle-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: fit-content;
+    padding: 0.5em 1em;
+    border-radius: 1000px;
+    color: var(--color-primary);
+    align-self: center;
+}
+
+/* to add some space at the top of modal if there was not enough height */
+@media only screen and (max-height: 26.25em) {
+    .rating, .thanks {
+        top: 60%;
+    }
+}
+
+/*bigger circle number beyond 400px width screen*/
+@media only screen and (min-width: 25em) {
+    html {
+        --circle-size: 5rem;
+    }
+}
+
+/*desktop*/
+@media only screen and (min-width: 62em){
+    .rating__num:hover{
+        background-color: var(--color-primary);
+        color: hsl(0, 0%, 100%);
+    }
+
+
+    .rating__btn:hover{
+        color: var(--color-primary);
+        background-color: hsl(0, 0%, 100%);
+    }
+}
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.cdnfonts.com/css/overpass?styles=14630,14629" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>FInteractive rating component</title>
+</head>
+<body>
+
+<main class="main">
+  <div class="rating">
+    <div class="rating__star">
+      <img class="rating__img" src="images/icon-star.svg" alt="star">
+    </div>
+    <h2 class="rating__title">How did we do?</h2>
+    <p class="rating__description">
+      Please let us know how we did with your support request. All feedback is appreciated
+      to help us improve our offering!
+    </p>
+    <ul class="rating__numbers">
+      <li class="rating__num">1</li>
+      <li class="rating__num">2</li>
+      <li class="rating__num">3</li>
+      <li class="rating__num">4</li>
+      <li class="rating__num">5</li>
+    </ul>
+    <button class="rating__btn" type="button">Submit</button>
+  </div>
+
+  <div class="thanks thanks--hidden">
+    <img class="thanks__img" src="images/illustration-thank-you.svg" alt="illustration">
+    <h3 class="thanks__result">You selected <span data-result>2</span> out of 5</h3>
+    <h2 class="thanks__title">Thank you!</h2>
+    <p class="thanks__description">
+      We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!
+    </p>
+  </div>
+</main>
+</body>
+</html>
